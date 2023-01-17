@@ -14,7 +14,7 @@ class HomeController extends Controller
     public function list() {
 
         // SELECT * FROM `trains`
-        $books = Train::all();
+        $trains = Train::all();
         return view('guest.home', compact('trains'));
     }
 }
