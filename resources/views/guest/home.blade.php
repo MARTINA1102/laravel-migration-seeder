@@ -8,17 +8,18 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <title>Document</title>
 </head>
-<body>
+<body class="container m-5">
+    <h1 class="text-center m-5 text-uppercase">Treni in partenza oggi</h1>
     <div class="row g-3">
         @foreach ($trains as $train)
             <div class="col-12 col-sm-6 col-md-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $train->stazione_partenza }}</h5>
-                        <h5 class="card-title">{{ $train->stazione_arrivo }}</h5>
+                        <p class="card-title">stazione di partenza: <span>{{ $train->stazione_partenza }}</span></p>
+                        <p class="card-title">stazione di arrivo: <span>{{ $train->stazione_arrivo }}</span></p>
                         <p class="card-text">
-                            {{ $train->ora_partenza }} <br>
-                            {{ $train->ora_arrivo}}
+                            orario partenza: <span>{{ $train->ora_partenza }}</span>  <br>
+                            orario arrivo: <span>{{ $train->ora_arrivo}}</span>
                         </p>
                         <a href="#" class="btn btn-primary">More...</a>
                     </div>
